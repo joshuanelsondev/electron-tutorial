@@ -22,7 +22,14 @@ module.exports = {
     },
     {
       name: "@electron-forge/maker-rpm",
-      config: {},
+      config: {
+        forge: {
+          packagerConfig: {
+            osxSign: false,
+            osxNotarize: false,
+          },
+        },
+      },
     },
   ],
   plugins: [
